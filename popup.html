@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+<style>
+     body {
+       width: 500px;
+       height: 50%;
+       margin: 10px 20px 10px 10px;
+       background-color: white;
+       font-family: 'Patua One', cursive;
+       font-size: 12px;
+     }
+     textarea {
+       -webkit-box-shadow: 5px 6px 15px 10px rgba(0,0,0,0.44);
+       box-shadow: 5px 6px 15px 10px rgba(0,0,0,0.44);
+       margin: 5px 5px 5px 5px;
+     }
+     .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 2px 2px;
+        cursor: pointer;
+        }
+     .raw-text {
+       height: 250px;
+     }
+     #content {
+       display: block;
+     }
+</style>
+<script src="/sherlockjs/sherlock.js"></script>
+<script src="popup.js">
+</script>
+</head>
+<body>
+   <h1>QuickCal
+     <img src="icon.png" style="width: 75px">
+   </h1>
+   <div class="row">
+   <div class="col">
+     <h4>Highlighted Text</h4>
+     <textarea id="text" class="raw-text" readonly> Please Highlight you information; It will load here </textarea>
+    </div>
+   <br>
+   <div class="col">
+     <h4>Event</h4>
+     <textArea id="title" readonly></textArea>
+     <h4>Start Date</h4>
+     <textArea id="startDate" readonly></textArea>
+     <h4>End Date</h4>
+     <textArea id="endDate" readonly></textArea>
+     <h4>Location</h4>
+     <textArea id="location" readonly></textArea>
+   </div>
+ </div>
+ </body>
+</html>

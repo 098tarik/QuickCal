@@ -1,0 +1,26 @@
+{
+ "name": "Selected Text",
+ "manifest_version": 2,
+ "content_security_policy": "script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='",
+ "version": "1.0",
+ "description": "Selected Text",
+ "browser_action": {
+   "default_title": "Selected Text",
+   "default_popup": "popup.html", 
+   "default_icon": "icon.png"
+ },
+ "permissions": [
+   "tabs",
+   "chrome://favicon/",
+   "http://*/*", 
+   "https://*/*"
+ ],
+ "content_scripts": [
+  {
+    "matches": ["http://*/*"],
+    "js": ["selection.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+  "_from": "sherlockjs@^1.4.0",
+  "_id": "sherlockjs@1.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-+IkG0zu/vrwjUcdp4iNTM000U6bgFzX0yqakrO+PrQOLl1nbbZ46361DBMwpG1TW+VLjuYZhvVn67e+AgtLLRg==",
+  "_location": "/sherlockjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "sherlockjs@^1.4.0",
+    "name": "sherlockjs",
+    "escapedName": "sherlockjs",
+    "rawSpec": "^1.4.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.4.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/sherlockjs/-/sherlockjs-1.4.0.tgz",
+  "_shasum": "57dcba75dd95b9e8243b67a6ee3e13629ac4b566",
+  "_spec": "sherlockjs@^1.4.0",
+  "_where": "/Users/tarik.hello/Desktop/Hack/react-parcel-extension-boilerplate",
+  "author": {
+    "name": "Neil Gupta"
+  },
+  "bugs": {
+    "url": "https://github.com/neilgupta/Sherlock/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Natural-language event parser for Javascript.",
+  "homepage": "https://github.com/neilgupta/Sherlock",
+  "keywords": [
+    "NLP",
+    "datetime"
+  ],
+  "license": "MIT",
+  "main": "sherlock.js",
+  "name": "sherlockjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neilgupta/Sherlock.git"
+  },
+  "version": "1.4.0"
+}
