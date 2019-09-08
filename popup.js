@@ -36,7 +36,9 @@ var isAllDay = sherlocked.isAllDay;   // false, since a time is included with th
 
 // Format Date for Google Calander
 console.log(startDate);
-var year = startDate.toString().substr(11,4);
+if (year != null) {
+  var year = startDate.toString().substr(11,4);
+}
 console.log(year);
 
 var day = startDate.toString().substr(8,2);
@@ -94,25 +96,26 @@ document.getElementById("startDate").innerHTML = startDate;
 document.getElementById("endDate").innerHTML = endDate;
 
 // code to find reference location
-text_cleaned = selection[0].toLowerCase().split(" ");
+var text_split = selection[0].split(" ");
+var text_lower_split = selection[0].toLowerCase().split(" ");
 var location = null; //initializes location
-if (text_cleaned.includes('at')){
-  var at1_index = text_cleaned.indexOf('at');
-  var at2_index = text_cleaned.lastIndexOf('at'); //checks for second "at"
+if (text_lower_split.includes('at')){
+  var at1_index = text_lower_split.indexOf('at');
+  var at2_index = text_lower_split.lastIndexOf('at'); //checks for second "at"
   if (check_for_time(at1_index+1) == false){ //if next word isn't a time word, it's probably a loc. word
-    var location = text_cleaned[at1_index+1]+" "+text_cleaned[at1_index+2];}
+    var location = text_split[at1_index+1]+" "+text_split[at1_index+2];}
   if (check_for_time(at2_index+1) == false){
-    var location = text_cleaned[at2_index+1]+" "+text_cleaned[at2_index+2];
+    var location = text_split[at2_index+1]+" "+text_split[at2_index+2];
   }
 }
 //Assumes everything in sentence following "in" is location
-if (text_cleaned.includes('in')){
+if (text_lower_split.includes('in')){
   console.log('includes in')
-  var in_index = text_cleaned.indexOf('in');
+  var in_index = text_lower_split.indexOf('in');
   i = 0; //incrementer
   location = "";
-  while (in_index + i < length(text_cleaned) && i < 5 && text_cleaned[in_index+i].endsWith(".") == false){
-    location = location + text_cleaned[in_index+i] + " ";
+  while (in_index + i < text_split.length && i < 5 && text_split[in_index+i].endsWith(".") == false){
+    location = location + text_lower_split[in_index+i] + " ";
     console.log(location);
     i++;
   }
